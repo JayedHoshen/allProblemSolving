@@ -1,8 +1,16 @@
 #include <stdio.h>
 
-#define R 3.1415
+#define PI 3.14159
 
 int main()
 {
-    int
+    double R, A;
+
+    scanf("%lf", &R);
+
+    A = PI * R * R;
+
+    printf("A=%0.4lf\n", A);
+
+    return 0;
 }
