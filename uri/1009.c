@@ -3,10 +3,13 @@
 int main()
 {
     char name[15];
+    double fixed_salary, sales_month, total_salary;
 
-    scanf("%s", &name);
+    scanf("%s %lf %lf", &name, &fixed_salary, &sales_month);
 
-    printf("%s", name);
+    total_salary = fixed_salary + (sales_month * 15 / 100);
+
+    printf("TOTAL = R$ %0.2lf\n", total_salary);
 
     return 0;
 }
