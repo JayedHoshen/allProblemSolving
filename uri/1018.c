@@ -2,33 +2,40 @@
 
 int main()
 {
-    int n, hundrednote, fiftynote, twentynote, tennote, fivenote, twonote, onenote;
+    int num, n, note100, note50, note20, note10, note5, note2, note1;
 
     scanf("%d", &n);
-    printf("%d\n", n);
 
-    if (n >= 0 && n <= 1000000) {
-        hundrednote=(n-(n%100))/100;
-        n=(n%100);
-        fiftynote=(n-(n%50))/50;
-        n=(n%50);
-        twentynote=(n-(n%20))/20;
-        n=(n%20);
-        tennote=(n-(n%10))/10;
-        n=(n%10);
-        fivenote=(n-(n%5))/5;
-        n=(n%5);
-        twonote=(n-(n%2))/2;
-        n=(n%2);
-        onenote=n;
-        printf("%d nota (s) de R$ 100,00\n", hundrednote);
-        printf("%d nota (s) de R$ 50,00\n", fiftynote);
-        printf("%d nota (s) de R$ 20,00\n", twentynote);
-        printf("%d nota (s) de R$ 10,00\n", tennote);
-        printf("%d nota (s) de R$ 5,00\n", fivenote);
-        printf("%d nota (s) de R$ 2,00\n", twonote);
-        printf("%d nota (s) de R$ 1,00\n", onenote);
-    }
+    num = n;
+
+    note100 = n / 100;
+    n %= 100;
+
+    note50 = n / 50;
+    n %= 50;
+
+    note20 = n / 20;
+    n %= 20;
+
+    note10 = n / 10;
+    n %= 10;
+
+    note5 = n / 5;
+    n %= 5;
+
+    note2 = n / 2;
+    n %= 2;
+
+    note1 = n;
+
+    printf("%d\n", num);
+    printf("%d nota(s) de R$ 100.00\n", note100);
+    printf("%d nota(s) de R$ 50.00\n", note50);
+    printf("%d nota(s) de R$ 20.00\n", note20);
+    printf("%d nota(s) de R$ 10.00\n", note10);
+    printf("%d nota(s) de R$ 5.00\n", note5);
+    printf("%d nota(s) de R$ 2.00\n", note2);
+    printf("%d nota(s) de R$ 1.00\n", note1);
 
     return 0;
 }
