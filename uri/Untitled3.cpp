@@ -1,27 +1,31 @@
-#include<iostream>
-#include <cstdio>
-#include <cmath>
+#include <iostream>
+#include <stdio.h>
 
 using namespace std;
 
-int main()
-{
-    double A, B, C, d, x1, x2;
+int main(){
+    int a, b, c, d;
 
-    scanf("%lf %lf %lf", &A, &B, &C);
+    cin >> a;
+    cin >> b;
+    cin >> c;
+    cin >> d;
 
-    d = sqrt((B*B) - 4 * (A*C));
+    int inicio = a*60 + b;
+    int final = c*60 + d;
+    int duracao = 0;
 
-    if ((int)d > 0 && A != 0) {
-        x1 = (- B + d) / (2 * A);
-        x2 = (- B - d) / (2 * A);
-
-        printf("R1 = %0.5lf\n", x1);
-        printf("R2 = %0.5lf\n", x2);
-    }
-    else {
-        printf("Impossivel calcular\n");
+    if(a <= c){
+              duracao = final - inicio;
+              if(duracao  0)
+                          printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)n",24,duracao%60);
+              else
+                          printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)n",(duracao - duracao%60)/60,duracao%60);
+    }else{
+          duracao = (24*60 - inicio) + final;
+          printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)n",(duracao - duracao%60)/60,duracao%60);
     }
 
     return 0;
+
 }
