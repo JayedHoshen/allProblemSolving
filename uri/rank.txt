@@ -1,3 +1,11 @@
+my rank 10-5-2020: 
+	DUET: Total- 222
+		My- 27
+	bangladesh position: Total- 29,988
+				My- 3,070
+	world position: Total- 285,545
+				My- 18,426
+---------------------------------------------------------
 my rank 9-5-2020: 
 	DUET: Total- 222
 		My- 34
@@ -39,4 +47,4 @@ my rank 5-5-2020:
 				My- 58,440
 -------------------------------------------------------------------------
 -------------------------------------------------------------------------
-DUET_Rank_fixed|-168- https://www.urionlinejudge.com.br/judge/en/universities?page=7&direction=DESC
+DUET_Rank_fixed|-169- https://www.urionlinejudge.com.br/judge/en/universities?page=7&direction=DESC
