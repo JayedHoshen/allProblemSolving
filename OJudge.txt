@@ -1,6 +1,5 @@
 Online Judge all::
 
-
     http://cpbook.subeen.com/p/blog-page_11.html
     https://www.urionlinejudge.com.br/judge/en/login
     https://uva.onlinejudge.org/
