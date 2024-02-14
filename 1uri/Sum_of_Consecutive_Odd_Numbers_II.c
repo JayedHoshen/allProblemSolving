@@ -9,7 +9,9 @@ int main()
     while(tc--) {
         scanf("%d %d", &a, &b);
         s = 0;
-        for(i = a+1; i < b; i++) if(i%2) s += i;
+        int min = a<b?a:b;
+        int max = a>b?a:b;
+        for(i = min+1; i < max; i++) if(i%2) s += i;
         printf("%d\n", s);
     }
 

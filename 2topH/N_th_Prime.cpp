@@ -21,15 +21,12 @@ int main()
 }
 
 int myPrime(int num) {
-    int i, root;
-    if(num == 2) return 1;
-    if(num < 2) return 0;
-    if(num%2 == 0) return 0;
+    if(num < 1) return 0;
+    if(num <= 3) return 1;
+    if(num%2 == 0 || num%3 == 0) return 0;
 
-    root = sqrt(num);
-
-    for(i = 3; i <= root; i+=2) {
-        if(num%i == 0) return 0;
+    for(int i = 5; i*i <= num; i+=6) {
+        if(num%i == 0 || num%(i+2) == 0) return 0;
     }
     
     return 1;
