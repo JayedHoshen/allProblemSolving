@@ -12,7 +12,7 @@ int main()
         for(j = 0; j < 12; j++) scanf("%lf", &a[i][j]);
     }
 
-    for(i = 0; i < 12; i++) sum += a[i][n];
+    for(i = 0; i < 12; i++) sum += a[n][i];
     avg = sum / 12.0;
 
     if(ch == 'S') printf("%.1lf\n", sum);

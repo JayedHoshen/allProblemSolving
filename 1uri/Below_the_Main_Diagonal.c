@@ -3,17 +3,23 @@
 int main()
 {
     char ch;
-    int i, j, n;
-    double avg, a[12][12], sum = 0.0;
+    int i, j;
+    double avg, a[12][12], sum = 0.0, c = 0.0;
 
-    scanf("%d %c", &n, &ch);
+    scanf("%c", &ch);
 
     for(i = 0; i < 12; i++) {
         for(j = 0; j < 12; j++) scanf("%lf", &a[i][j]);
     }
 
-    for(i = 0; i < 12; i++) sum += a[i][n];
-    avg = sum / 12.0;
+    for(i = 0; i < 12; i++) for(j = 0; j < 12; j++) {
+        if(i > j) {
+            sum += a[i][j];
+            c++;
+        } 
+    } 
+
+    avg = sum / c;
 
     if(ch == 'S') printf("%.1lf\n", sum);
     else if(ch == 'M') printf("%.1lf\n", avg);
