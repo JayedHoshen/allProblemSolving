@@ -6,13 +6,14 @@ int main()
     scanf("%d", &tc);
 
     while(tc--) {
-        int r, cont = 0;
-        float n;
-        scanf("%f", &n);
-        while(1) {
-            r = n / 2;
+        int cont;
+        double n;
+        scanf("%lf", &n);
+
+        cont = 0;
+        while(n > 1) {
             cont++;
-            if(r==0) break;
+            n /= 2;
         }
         printf("%d dias\n", cont);
     }
