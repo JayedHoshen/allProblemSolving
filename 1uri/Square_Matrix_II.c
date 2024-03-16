@@ -2,26 +2,23 @@
 
 int main()
 {
-    int n, i, j, l, hn, a, b;
+    int n, i, j, a, b;
 
     while(1) {
         scanf("%d", &n);
         if(n==0) break;
 
         int array[n][n];
-
-        hn = n / 2;
-        if(n%2) hn++;
-        a = 0;
-        b = n-1;
         
-        for(l = 1; l <= hn; l++) {
-            for(i = a; i <= b; i++) {
-                for(j = a; j <= b; j++) {
-                    array[i][j] = l;
-                }
+        for(i = 0; i < n; i++) {
+            a = i+1;
+            b = 2;
+            for(j = 0; j <= i; j++, a--) {
+                array[i][j] = a;
             }
-            a++; b--;
+            for(j = i+1; j < n; j++, b++) {
+                array[i][j] = b;
+            }
         }
 
         // printing array
